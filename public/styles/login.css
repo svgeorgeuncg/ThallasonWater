@@ -1,0 +1,112 @@
+/* Login Page Styles */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px); /* Adjust for header and footer height */
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.login-container {
+    background-color: #1c0b19; /* Matches site's theme */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.login-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #eef0f2;
+}
+
+.login-container p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #eef0f2;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #eef0f2;
+    color: #0c0a16;
+    font-size: 1rem;
+}
+
+.form-group input:focus {
+    outline: 2px solid #3e92cc; /* Blue highlight */
+}
+
+.login-btn {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background-color: #3e92cc;
+    color: #eef0f2;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #285b8a;
+}
+
+.google-login-btn {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background-color: #db4437;
+    color: #eef0f2;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.google-login-btn:hover {
+    background-color: #a93227;
+}
+
+.divider {
+    margin: 1.5rem 0;
+    font-size: 1rem;
+    color: #eef0f2;
+}
+
+/* Footer Styles (inherits from styles.css) */
+footer {
+    background-color: #1c0b19;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #eef0f2;
+}
+
+footer a {
+    color: #3e92cc;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

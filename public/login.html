@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+  Name: Samuel George
+  Date: 11.23.2024
+  CSC 372-01
+
+  This is the login.html page for the ThalassonWater project.
+  It provides a login form specifically for admin authentication.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Log In - Thalasson</title>
+    <link rel="stylesheet" href="styles/style.css"> <!-- Main theme styles -->
+    <link rel="stylesheet" href="styles/login.css"> <!-- Login-specific styles -->
+    <script defer src="scripts/login.js"></script> <!-- JS for login functionality -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Thalasson</a>
+            <div class="nav-buttons">
+                <a href="our-story.html">Our Story</a>
+                <a href="shop.html">Shop</a>
+                <a href="cart.html">Shopping Cart</a>
+                <a href="details.html">Our Products</a>
+                <a href="login.html">Admin Log In</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Login Section -->
+    <main class="login-section">
+        <div class="login-container">
+            <h2>Admin Access Only</h2>
+            <p>This page is restricted to authorized Thalasson admins. Please log in to access admin tools and manage the platform.</p>
+            <form id="login-form" action="/api/admin/login" method="post">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="login-btn">Log In</button>
+            </form>
+            <p class="divider">Or</p>
+            <button class="google-login-btn" onclick="alert('Google Auth Coming Soon!')">Log in with Google</button>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 Thalasson Water. All rights reserved.</p>
+        <p>Contact us at: <a href="mailto:info@thalasson.com">info@thalasson.com</a></p>
+    </footer>
+</body>
+</html>

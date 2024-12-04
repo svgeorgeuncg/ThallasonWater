@@ -1,0 +1,123 @@
+/* Layout Settings for Full Page Height */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.product-main {
+    flex-grow: 1; /* Ensures this section grows to push footer down */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3rem;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Product Image Wrapper */
+.product-image-wrapper {
+    background-color: #1c0b19;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+/* Product Info */
+.product-info {
+    max-width: 500px;
+    color: #eef0f2;
+}
+
+.product-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.product-info p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+/* Additional Images Section */
+.additional-images {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding-top: 1rem;
+    margin: 2rem 0; /* Adds space above and below the image section */
+}
+
+.additional-image-item {
+    text-align: center;
+    color: #eef0f2;
+    width: 100px;
+}
+
+.additional-image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.additional-image-item p {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* Centered Add to Cart Button */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centers the button */
+    margin-top: 2rem; /* Adds space above the button */
+}
+
+.add-to-cart {
+    background-color: #3e92cc;
+    color: #eef0f2;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #1c6f99;
+}
+
+/* Footer */
+footer {
+    background-color: #1c0b19;
+    color: #eef0f2;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+footer a {
+    color: #3e92cc;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,280 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+body {
+    background: #0c0a16; /* Solid dark color for background */
+    color: #eef0f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+}
+
+
+/* Header Section */
+header {
+    width: 100%;
+    background-color: #0c0a16;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #eef0f2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-buttons a {
+    margin-left: 1.5rem;
+    color: #eef0f2;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.nav-buttons a:hover {
+    background-color: #3e92cc;
+}
+
+/* Header Image */
+.header-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Title Banner */
+.title-banner {
+    width: 100vw;
+    background-color: #0c0a16;
+    color: #eef0f2;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.title-banner h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #eef0f2;
+}
+
+/* Info Section with Image and Paragraph */
+.info-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem; /* Increased spacing between image and text */
+    padding: 4rem;
+    max-width: 1200px; /* Wider max width for larger layouts */
+    margin: 0 auto;
+}
+
+.info-image img {
+    width: 100%;
+    max-width: 500px; /* Increased max width */
+    height: auto;
+    border-radius: 12px; /* Slightly larger rounded corners for a modern touch */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+}
+
+.info-text {
+    max-width: 600px; /* Wider text area */
+    color: #eef0f2;
+    font-size: 1.3rem; /* Larger font size for readability */
+    line-height: 1.8;
+    font-weight: 300; /* Light font weight for a sleek look */
+    text-align: left;
+}
+
+.info-text p {
+    margin-bottom: 1.5rem; /* Space between paragraphs if there’s more than one */
+}
+
+@media (max-width: 768px) {
+    .info-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .info-text, .info-image img {
+        max-width: 100%;
+    }
+}
+
+
+/* Footer Section */
+footer {
+    width: 100%;
+    background-color: #04030f;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #eef0f2;
+}
+
+footer a {
+    color: #3e92cc;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* Shop Section */
+.shop-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    color: #eef0f2;
+}
+
+.shop-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #eef0f2;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Fixed 2 columns for larger screens */
+    gap: 3rem;
+    justify-items: center;
+    width: 90%; /* Increase width to reduce blank space */
+    max-width: 1200px;
+}
+
+.product-item {
+    background-color: #1c0b19;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    text-decoration: none;
+    color: #eef0f2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.3);
+    width: 100%; /* Ensures each product fills its column */
+    max-width: 500px; /* Increased max-width for larger products */
+}
+
+.product-item:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    max-width: 400px; /* Larger image size */
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.product-item h3 {
+    font-size: 1.5rem; /* Larger font size */
+    margin-bottom: 0.5rem;
+}
+
+.product-item p {
+    font-size: 1.3rem; /* Larger price font */
+    font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}
+
+/* Hero Image Section */
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Section Divider */
+.section-divider {
+    width: 100%;
+    background-color: #1c0b19; /* Matches theme color */
+    color: #eef0f2;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+.section-divider h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Story Section */
+.story-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 3rem;
+}
+
+.story-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.story-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #eef0f2;
+    max-width: 500px;
+}
+
+.story-content img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Adds depth */
+}
+
+/* Reverse layout for alternating sections */
+.story-content.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .story-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .story-content,
+    .story-content.reverse {
+        flex-direction: column;
+    }
+
+    .story-content img {
+        max-width: 100%;
+    }
+}

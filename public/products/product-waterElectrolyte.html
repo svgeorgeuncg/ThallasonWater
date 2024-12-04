@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thalasson 6-Pack</title>
+    <!-- Link to CSS files -->
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/product.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">Thalasson</a>
+            <div class="nav-buttons">
+                <a href="../our-story.html">Our Story</a>
+                <a href="../shop.html">Shop</a>
+                <a href="../cart.html">Shopping Cart</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Product Main Section -->
+    <main class="product-main">
+        <div class="product-image-wrapper">
+            <img src="../assets/images/electrolyte-water-pack.webp" alt="Thalasson 6-Pack" class="product-image">
+        </div>
+        <div class="product-info">
+            <h2>Thalasson Water + Salt-Based Electrolyte Pack</h2>
+            <p>Our Water + Electrolyte Pack is formulated to give you an optimal balance of hydration and essential salts in every bottle. Ideal for athletes and busy individuals, this pack supports performance and recovery, helping you stay energized throughout the day.</p>
+
+            <!-- Additional Images Section -->
+            <section class="additional-images">
+                <div class="additional-image-item">
+                    <img src="../assets/images/natural-ingredients.png" alt="Natural Ingredients">
+                    <p>Natural Ingredients</p>
+                </div>
+                <div class="additional-image-item">
+                    <img src="../assets/images/eco-friendly-packaging.png" alt="Recyclable Packaging">
+                    <p>Recyclable Packaging</p>
+                </div>
+                <div class="additional-image-item">
+                    <img src="../assets/images/long-hydration.png" alt="Hydration Benefits">
+                    <p>Hydration Benefits</p>
+                </div>
+            </section>
+
+            <!-- Add to Cart Button with onclick function -->
+            <div class="button-container">
+                <button onclick="addToCart('Thalasson 6-Pack', 20.00, '../assets/images/6-pack.webp')" class="add-to-cart">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 Thalasson Water. All rights reserved.</p>
+        <p>Contact us at: <a href="mailto:info@thalasson.com">info@thalasson.com</a></p>
+    </footer>
+
+    <!-- Link to JavaScript -->
+    <script src="../js/cart.js"></script>
+</body>
+</html>
