@@ -278,3 +278,23 @@ footer a:hover {
         max-width: 100%;
     }
 }
+
+.checkout-button-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.checkout-btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: #3e92cc;
+    color: #eef0f2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+    background-color: #2179b8;
+}

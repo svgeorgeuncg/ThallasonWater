@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thalasson 6-Pack</title>
+    <title>Product Details</title>
     <!-- Link to CSS files -->
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/product.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/product.css">
 </head>
 <body>
 
     <!-- Header Section -->
     <header>
         <nav>
-            <a href="products/index.html" class="logo">Thalasson</a>
+            <a href="index.html" class="logo">Thalasson</a>
             <div class="nav-buttons">
-                <a href="../our-story.html">Our Story</a>
+                <a href="our-story.html">Our Story</a>
                 <a href="shop.html">Shop</a>
                 <a href="cart.html">Shopping Cart</a>
             </div>
@@ -25,31 +25,31 @@
     <!-- Product Main Section -->
     <main class="product-main">
         <div class="product-image-wrapper">
-            <img src="../assets/images/6-pack.webp" alt="Thalasson 6-Pack" class="product-image">
+            <img id="product-image" src="" alt="Product Image" class="product-image">
         </div>
         <div class="product-info">
-            <h2>Thalasson 6-Pack</h2>
-            <p>Our 6-pack of Thalasson Water is crafted to keep you hydrated all day. With six bottles of pure, refreshing water, this pack is perfect for your daily hydration needs, offering a convenient and long-lasting solution to quench your thirst.</p>
+            <h2 id="product-name">Loading...</h2>
+            <p id="product-description">Fetching product details...</p>
 
             <!-- Additional Images Section -->
             <section class="additional-images">
                 <div class="additional-image-item">
-                    <img src="../assets/images/natural-ingredients.png" alt="Natural Ingredients">
+                    <img src="assets/images/natural-ingredients.png" alt="Natural Ingredients">
                     <p>Natural Ingredients</p>
                 </div>
                 <div class="additional-image-item">
-                    <img src="../assets/images/eco-friendly-packaging.png" alt="Recyclable Packaging">
+                    <img src="assets/images/eco-friendly-packaging.png" alt="Recyclable Packaging">
                     <p>Recyclable Packaging</p>
                 </div>
                 <div class="additional-image-item">
-                    <img src="../assets/images/long-hydration.png" alt="Hydration Benefits">
+                    <img src="assets/images/long-hydration.png" alt="Hydration Benefits">
                     <p>Hydration Benefits</p>
                 </div>
             </section>
 
-            <!-- Add to Cart Button with onclick function -->
+            <!-- Add to Cart Button -->
             <div class="button-container">
-                <button onclick="addToCart('Thalasson 6-Pack', 20.00, '../assets/images/6-pack.webp')" class="add-to-cart">
+                <button id="add-to-cart-btn" class="add-to-cart">
                     Add to Cart
                 </button>
             </div>
@@ -62,7 +62,8 @@
         <p>Contact us at: <a href="mailto:info@thalasson.com">info@thalasson.com</a></p>
     </footer>
 
-    <!-- Link to JavaScript -->
-    <script src="../js/cart.js"></script>
+    <!-- JavaScript -->
+    <script src="scripts/product-detail.js" defer></script>
+    <script src="scripts/cart.js" defer></script>
 </body>
 </html>

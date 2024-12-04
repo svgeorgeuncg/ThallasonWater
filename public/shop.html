@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thalasson Shop</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css"> <!-- Main Styles -->
+    <link rel="stylesheet" href="styles/shop.css"> <!-- Shop-specific Styles -->
 </head>
 <body>
-
     <!-- Header Section -->
     <header>
         <nav>
@@ -17,7 +17,6 @@
                 <a href="shop.html">Shop</a>
                 <a href="cart.html">Shopping Cart</a>
                 <a href="details.html">Our Products</a>
-                <a href="#feature3">Feature 3</a>
                 <a href="login.html">Log In</a>
             </div>
         </nav>
@@ -26,48 +25,11 @@
     <!-- Shop Section -->
     <section class="shop-section">
         <h2>Our Products</h2>
-        <div class="product-grid">
-            <!-- Placeholder for Products -->
-            <a href="products/product-6pack.html" class="product-item">
-                <img src="assets/images/6-pack.webp" alt="Thalasson Water 6 Pack">
-                <h3>Thalasson Water 6 Pack</h3>
-                <p>$20.00</p>
-            </a>
-            <a href="products/product-12pack.html" class="product-item">
-                <img src="assets/images/12-pack.webp" alt="Thalasson Water 12 Pack">
-                <h3>Thalasson Water 12 Pack</h3>
-                <p>$25.00</p>
-            </a>
-            <a href="products/product-apple.html" class="product-item">
-                <img src="assets/images/apple-electrolyte.webp" alt="Apple Electrolyte">
-                <h3>Thalasson Salt-based Green Apple Flavored Electrolyte</h3>
-                <p>$30.00</p>
-            </a>
-            <a href="products/product-berry.html" class="product-item">
-                <img src="assets/images/berry-electrolyte.webp" alt="Berry Electrolyte">
-                <h3>Thalasson Salt-based Berry Flavored Electrolyte</h3>
-                <p>$15.00</p>
-            </a>
-            <a href="products/product-mango.html" class="product-item">
-                <img src="assets/images/mango-electrolyte.webp" alt="Mango Electrolyte">
-                <h3>Thalasson Salt-based Mango Flavored Electrolyte</h3>
-                <p>$18.00</p>
-            </a>
-            <a href="products/product-waterElectrolyte.html" class="product-item">
-                <img src="assets/images/electrolyte-water-pack.webp" alt="Water Electrolyte Pack">
-                <h3>Thalasson Water + Salt-based Electrolyte Pack</h3>
-                <p>$22.00</p>
-            </a>
-            <a href="products/product-filter.html" class="product-item">
-                <img src="assets/images/water-filtration-system.webp" alt="Water Filtration System">
-                <h3>Thalasson Filtration System</h3>
-                <p>$349.99</p>
-            </a>
-            <a href="products/product-reusableBottle.html" class="product-item">
-                <img src="assets/images/resuable-bottle.webp" alt="Reusable Bottle">
-                <h3>Thalasson Glass Bottle</h3>
-                <p>$19.00</p>
-            </a>
+        <div class="product-grid" id="product-grid">
+            <!-- Products will be dynamically inserted here by shop.js -->
+        </div>
+        <div class="error-message" id="error-message" style="display: none;">
+            <p>Sorry, we couldn't load the products. Please try again later.</p>
         </div>
     </section>
 
@@ -77,5 +39,7 @@
         <p>Contact us at: <a href="mailto:info@thalasson.com">info@thalasson.com</a></p>
     </footer>
 
+    <!-- JavaScript -->
+    <script src="scripts/shop.js" defer></script>
 </body>
 </html>
