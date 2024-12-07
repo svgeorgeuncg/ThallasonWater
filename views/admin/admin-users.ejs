@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - User Management</title>
+    <link rel="stylesheet" href="../styles/admin-users.css">
+    <link rel="stylesheet" href="../styles/admin-products.css">
+</head>
+<body>
+    <!-- Admin Navigation Bar -->
+    <header>
+        <nav class="admin-nav">
+            <a href="../admin/admin-products.html" class="logo">thalasson admin</a>
+            <div class="nav-links">
+                <a href="../admin/admin-products.html">Product Listing</a>
+                <a href="../admin/admin-users.html">User Listing</a>
+                <a href="/api/users/logout" id="logout-button">Sign Out</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- User Management Section -->
+    <section class="user-management">
+        <h2>User Management</h2>
+        <table id="user-table">
+            <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- User rows will be dynamically inserted by JavaScript -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Add Logout Functionality -->
+    <script>
+        document.getElementById("logout-button").addEventListener("click", async (e) => {
+            e.preventDefault();
+            try {
+                const response = await fetch("/api/users/logout", {
+                    method: "POST",
+                    credentials: "include",
+                });
+                if (response.ok) {
+                    window.location.href = "../login.html"; // Redirect to login page
+                } else {
+                    alert("Failed to log out. Please try again.");
+                }
+            } catch (error) {
+                console.error("Error logging out:", error);
+                alert("An error occurred while logging out.");
+            }
+        });
+    </script>
+
+    <!-- JavaScript for User Management -->
+    <script src="../js/admin-users.js" defer></script>
+</body>
+</html>

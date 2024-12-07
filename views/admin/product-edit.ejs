@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+  Name: Samuel George
+  Date: 11.07.2024
+  CSC 372-01
+
+  This is the product-edit.html page for the Thalasson Admin Panel. This page allows the admin 
+  to edit an existing product's details, excluding the Product ID, which is not editable.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product - Thalasson Admin</title>
+    <link rel="stylesheet" href="../styles/product-edit.css">
+</head>
+<body>
+
+    <!-- Admin Navigation Bar -->
+    <header>
+        <nav class="admin-nav">
+            <a href="../admin/admin-products.html" class="logo">thalasson admin</a>
+            <div class="nav-links">
+                <a href="../admin/admin-upload.html">bulk upload</a>
+                <a href="../admin/admin-products.html">product listing</a>
+                <a href="../index.html">sign out</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Edit Product Section -->
+    <section class="edit-product">
+        <h2>Edit Product</h2>
+        
+        <!-- Edit Product Form -->
+        <form id="edit-product-form">
+            <!-- Display Product ID as a read-only field -->
+            <label for="product-id">Product ID (Read-only):</label>
+            <input type="text" id="product-id" readonly>
+            
+            <!-- Editable Fields -->
+            <label for="product-name">Name:</label>
+            <input type="text" id="product-name" required>
+            
+            <label for="product-description">Description:</label>
+            <textarea id="product-description" required></textarea>
+            
+            <label for="product-category">Category:</label>
+            <input type="text" id="product-category" required>
+            
+            <label for="product-image">Image Path:</label>
+            <input type="text" id="product-image" required>
+            
+            <label for="product-price">Price:</label>
+            <input type="number" id="product-price" step="0.01" required>
+            
+            <button type="submit">Save Changes</button>
+            <button type="button" onclick="window.location.href='admin-products.html'">Cancel</button>
+        </form>
+    </section>
+
+    <script src="../js/admin.js"></script> <!-- Link to JavaScript file -->
+</body>
+</html>

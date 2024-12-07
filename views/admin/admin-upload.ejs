@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+  Name: Samuel George
+  Date: 11.07.2024
+  CSC 372-01
+
+  This is the admin-upload.html page for the Thalasson Admin Panel. This page allows administrators
+  to bulk upload product data in JSON or CSV format.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Bulk Upload</title>
+    <link rel="stylesheet" href="../styles/admin.css">
+</head>
+<body>
+
+    <!-- Admin Navigation Bar -->
+    <header>
+        <nav class="admin-nav">
+            <a href="../admin/admin-products.html" class="logo">thalasson admin</a>
+            <div class="nav-links">
+                <a href="../admin/admin-upload.html">bulk upload</a>
+                <a href="../admin/admin-products.html">product listing</a>
+                <a href="/api/users/logout" id="logout-button">sign out</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Bulk Upload Section -->
+    <section class="bulk-upload">
+        <h2>bulk product upload</h2>
+
+         <!-- File Upload Form -->
+         <form id="upload-form" enctype="multipart/form-data" method="post" action="/api/upload">
+            <label for="upload-file">Choose file to upload (JSON or CSV):</label>
+            <input type="file" id="upload-file" name="file" accept=".json, .csv" required>
+        
+            <label for="images">Upload images:</label>
+            <input type="file" id="images" name="images" accept="image/*" multiple required>
+        
+            <button type="submit" id="upload-button">Upload</button>
+        </form>
+        
+        
+        <!-- Instructions Section -->
+        <div class="upload-instructions">
+            <h3>instructions</h3>
+            <p>please upload a file in JSON or CSV format containing the following fields for each product:</p>
+            <ul>
+                <li><strong>product id</strong> (optional for new entries)</li>
+                <li><strong>name</strong></li>
+                <li><strong>description</strong></li>
+                <li><strong>image path</strong> (relative path)</li>
+                <li><strong>price</strong></li>
+            </ul>
+            <p>example (CSV format):</p>
+            <pre>
+product id, name, description, image path, price
+1, Thalasson 6-Pack, Refreshing hydration, ../assets/images/6-pack.webp, 10.00
+2, Thalasson Berry Electrolyte, Berry-flavored hydration, ../assets/images/berry-electrolyte.webp, 15.00
+            </pre>
+            <p>example (JSON format):</p>
+            <pre>
+[
+    {
+        "productId": 1,
+        "name": "Thalasson 6-Pack",
+        "description": "Refreshing hydration",
+        "imagePath": "../assets/images/6-pack.webp",
+        "price": 10.00
+    },
+    {
+        "productId": 2,
+        "name": "Thalasson Berry Electrolyte",
+        "description": "Berry-flavored hydration",
+        "imagePath": "../assets/images/berry-electrolyte.webp",
+        "price": 15.00
+    }
+]
+            </pre>
+        </div>
+    </section>
+
+    <!-- JavaScript for Bulk Upload -->
+    <script src="../js/admin-upload.js" defer></script> <!-- Updated JS path -->
+</body>
+</html>

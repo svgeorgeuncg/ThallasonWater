@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title || 'Our Products - Thalasson' %></title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/details.css"> <!-- CSS for styling this page -->
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <a href="/" class="logo">Thalasson</a>
+            <div class="nav-buttons">
+                <a href="/our-story">Our Story</a>
+                <a href="/shop">Shop</a>
+                <a href="/cart">Shopping Cart</a>
+                <a href="/health-tips">Health Tips!</a>
+                <a href="/details">Our Products</a>
+                <a href="/login">Log In</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Section for Product Features -->
+    <section class="product-features">
+        <h2>Our Commitment to Quality</h2>
+
+        <!-- Gluten-Free Section -->
+        <div class="feature-item">
+            <img src="/assets/images/gluten-free.png" alt="Gluten-Free">
+            <div class="feature-text">
+                <h3>Gluten-Free</h3>
+                <p>At Thalasson, we are committed to creating products that meet diverse dietary needs, including gluten-free options. Our production process ensures no cross-contamination, allowing everyone to enjoy safe, refreshing hydration without compromising their health. We proudly offer gluten-free hydration solutions that are perfect for those with gluten sensitivities.</p>
+            </div>
+        </div>
+
+        <!-- Locally Made Section -->
+        <div class="feature-item">
+            <img src="/assets/images/made-local.png" alt="Locally Made">
+            <div class="feature-text">
+                <h3>Locally Made</h3>
+                <p>Supporting local communities is one of our core values. Thalasson products are crafted locally, which not only reduces our carbon footprint but also helps strengthen the local economy. By sourcing materials and manufacturing locally, we ensure high-quality standards while supporting sustainable practices.</p>
+            </div>
+        </div>
+
+        <!-- Long-Lasting Hydration Section -->
+        <div class="feature-item">
+            <img src="/assets/images/long-hydration.png" alt="Long-Lasting Hydration">
+            <div class="feature-text">
+                <h3>Long-Lasting Hydration</h3>
+                <p>Our products are designed for long-lasting hydration to keep you refreshed throughout the day. Each bottle is carefully formulated to provide sustained hydration, making it ideal for active lifestyles. With Thalasson, you can trust that you’re getting more than just water – it’s hydration that lasts.</p>
+            </div>
+        </div>
+
+        <!-- Eco-Friendly Section -->
+        <div class="feature-item">
+            <img src="/assets/images/eco-friendly-packaging.png" alt="Eco-Friendly">
+            <div class="feature-text">
+                <h3>Eco-Friendly</h3>
+                <p>Thalasson is dedicated to environmental responsibility. From our eco-friendly packaging to sustainable sourcing practices, we strive to reduce our environmental impact. Our bottles are recyclable, and we continuously work toward reducing waste, so you can feel good about your choice to hydrate sustainably.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© <%= new Date().getFullYear() %> Thalasson Water. All rights reserved.</p>
+        <p>Contact us at: <a href="mailto:info@thalasson.com">info@thalasson.com</a></p>
+    </footer>
+
+</body>
+</html>

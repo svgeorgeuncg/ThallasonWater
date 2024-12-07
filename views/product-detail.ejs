@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">Thalasson</a>
+            <div class="nav-buttons">
+                <a href="/our-story">Our Story</a>
+                <a href="/shop">Shop</a>
+                <a href="/cart">Shopping Cart</a>
+                <a href="/health-tips">Health Tips!</a>
+                <a href="/details">Our Products</a>
+                <a href="/login">Log In</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="product-detail-container">
+        <h1><%= product.name %></h1>
+        <img src="<%= product.image %>" alt="<%= product.name %>" class="product-image">
+        <p><%= product.description %></p>
+        <p>Price: $<%= product.price.toFixed(2) %></p>
+        <button class="btn" onclick="addToCart('<%= product.id %>')">Add to Cart</button>
+    </main>
+
+    <footer>
+        <p>© <%= new Date().getFullYear() %> Thalasson Water. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function addToCart(productId) {
+            console.log('Adding product to cart:', productId);
+            // Add cart functionality here
+        }
+    </script>
+</body>
+</html>

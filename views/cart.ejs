@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title || 'Shopping Cart' %></title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/cart.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">Thalasson</a>
+            <div class="nav-buttons">
+                <a href="/our-story">Our Story</a>
+                <a href="/shop">Shop</a>
+                <a href="/cart">Shopping Cart</a>
+                <a href="/health-tips">Health Tips!</a>
+                <a href="/details">Our Products</a>
+                <a href="/login">Log In</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Your Shopping Cart</h1>
+        <div class="cart-items">
+            <!-- Dynamically rendered cart items will appear here -->
+        </div>
+        <div class="cart-summary">
+            <p>Subtotal: $<span id="cart-subtotal">0.00</span></p>
+            <br>
+            <p>Tax: $<span id="cart-tax">0.00</span></p>
+            <br>
+            <p>Total: $<span id="cart-total">0.00</span></p>
+            <br>
+            <a href="/checkout" id="checkout-button" class="checkout-btn">Proceed to Checkout</a>
+            <br>
+        </div>
+    </main>
+
+    <footer>
+        <p>© <%= new Date().getFullYear() %> Thalasson Water. All rights reserved.</p>
+    </footer>
+
+    <script src="/scripts/cart.js" defer></script>
+</body>
+</html>

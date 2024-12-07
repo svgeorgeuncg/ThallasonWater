@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title || 'Health Tip of the Day' %></title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/health-tips.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">Thalasson</a>
+            <div class="nav-buttons">
+                <a href="/our-story">Our Story</a>
+                <a href="/shop">Shop</a>
+                <a href="/cart">Shopping Cart</a>
+                <a href="/health-tips">Health Tips!</a>
+                <a href="/details">Our Products</a>
+                <a href="/login">Log In</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="health-tip-container">
+        <h1>Random Health Tip Generator!</h1>
+        <div id="health-tip">
+            <p><%= healthTip || 'Loading today\'s health tip...' %></p>
+        </div>
+        <button id="new-tip-button" class="btn">Get Another Tip</button>
+    </main>
+
+    <footer>
+        <p>© <%= new Date().getFullYear() %> Thalasson Water. All rights reserved.</p>
+    </footer>
+
+    <script src="/scripts/health-tips.js"></script>
+</body>
+</html>
