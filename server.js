@@ -18,6 +18,7 @@ const adminRoutes = require('./routes/admin'); // Handles admin panel functional
 const usersRoutes = require('./routes/users'); // Handles user authentication and management
 const adminUsersRoutes = require('./routes/adminUsers'); // Admin user management routes
 const adminProductsRoutes = require('./routes/adminProducts'); // Admin product management routes
+const uploadRoutes = require('./routes/upload');
 
 // ==========================
 // Initialize Express App
@@ -78,6 +79,8 @@ app.use('/api/users', usersRoutes); // API routes for user authentication and ma
 app.use('/api/admin-products', adminProductsRoutes); // API routes for admin product management
 
 app.use('/api/admin-users', adminUsersRoutes); // API routes for admin user management
+
+app.use('/api/upload', uploadRoutes); // API routes for uploading products on the admin site
 
 // ==========================
 // Catch-All Route for Undefined Paths
