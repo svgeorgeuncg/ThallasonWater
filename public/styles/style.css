@@ -298,3 +298,44 @@ footer a:hover {
 .checkout-btn:hover {
     background-color: #2179b8;
 }
+
+
+.health-tip-container {
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 600px;
+    font-family: Arial, sans-serif;
+}
+
+.health-tip-container h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#health-tip p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#health-tip a {
+    font-size: 1rem;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+#health-tip a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}

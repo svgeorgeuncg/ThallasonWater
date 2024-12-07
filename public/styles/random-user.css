@@ -1,0 +1,41 @@
+#random-user-section {
+    text-align: center;
+    padding: 20px;
+}
+
+#user-profile {
+    margin-top: 20px;
+    display: inline-block;
+    text-align: left;
+    max-width: 300px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#user-profile img {
+    display: block;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+}
+
+#user-profile p {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+#generate-user-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#generate-user-btn:hover {
+    background-color: #0056b3;
+}

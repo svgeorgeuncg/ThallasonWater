@@ -3,42 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart - Thalasson</title>
+    <title>Shopping Cart</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/cart.css">
 </head>
 <body>
-
-    <!-- Header Section -->
     <header>
         <nav>
             <a href="index.html" class="logo">Thalasson</a>
             <div class="nav-buttons">
-                <a href="our-story.html">Our Story</a>
                 <a href="shop.html">Shop</a>
                 <a href="cart.html">Shopping Cart</a>
-                <a href="details.html">Our Products</a>
-                <a href="login.html">Log In</a>
             </div>
         </nav>
     </header>
 
-    <!-- Cart Section -->
-    <section class="cart-section">
-        <h2>Your Shopping Cart</h2>
+    <main>
+        <h1>Your Shopping Cart</h1>
         <div class="cart-items">
-            <!-- Items will be dynamically generated here by JavaScript -->
+            <!-- Dynamically rendered cart items will appear here -->
         </div>
-
-        <!-- Cart Summary -->
         <div class="cart-summary">
-            <h3>Subtotal: $<span id="cart-subtotal">0.00</span></h3>
-            <h3>Tax (6.75%): $<span id="cart-tax">0.00</span></h3>
-            <h3>Total: $<span id="cart-total">0.00</span></h3>
-            <button id="checkout-button">Proceed to Checkout</button>
-        </div>
-    </section>
+            <p>Subtotal: $<span id="cart-subtotal">0.00</span></p>
+            <p>Tax: $<span id="cart-tax">0.00</span></p>
+            <p>Total: $<span id="cart-total">0.00</span></p>
+            <a href="checkout.html" id="checkout-button" class="checkout-btn">Proceed to Checkout</a>
 
-    <script src="../js/cart.js"></script>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Thalasson Water. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/cart.js" defer></script>
 </body>
 </html>

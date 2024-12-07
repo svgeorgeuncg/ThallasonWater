@@ -1,17 +1,45 @@
 // routes/checkout.js
 const express = require('express');
 const router = express.Router();
+const { addOrder, addOrderDetails } = require('../models/checkoutModel');
 
-// Example route for processing a checkout
-router.post('/', (req, res) => {
-    const { name, email, address, state, zip, paymentMethod, totalPrice } = req.body;
+// Route for processing a checkout
+router.post('/', async (req, res) => {
+    const { name, email, address, state, zip, payment, cart } = req.body;
 
-    // Add logic to save the order to the database
-    // Example: db.insertOrder(...)
+    if (!cart || cart.length === 0) {
+        return res.status(400).json({ error: 'Cart is empty. Cannot process checkout.' });
+    }
 
-    console.log('Checkout data received:', req.body);
+    try {
+        // Step 1: Add order to the database
+        const orderId = await addOrder({
+            name,
+            email,
+            address,
+            state,
+            zip,
+            payment,
+        });
 
-    res.status(200).json({ message: 'Checkout successful!' });
+        console.log(`Order created with ID: ${orderId}`);
+
+        // Step 2: Add order details for each item in the cart
+        for (const item of cart) {
+            await addOrderDetails(orderId, item.id, item.quantity);
+        }
+
+        console.log(`Order details saved for Order ID: ${orderId}`);
+
+        // Step 3: Respond with success
+        res.status(200).json({
+            message: 'Checkout successful!',
+            orderId: orderId,
+        });
+    } catch (error) {
+        console.error('Error processing checkout:', error);
+        res.status(500).json({ error: 'Failed to process checkout. Please try again.' });
+    }
 });
 
 module.exports = router;

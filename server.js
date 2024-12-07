@@ -8,6 +8,8 @@ const bodyParser = require('body-parser'); // Middleware to parse incoming reque
 const session = require('express-session'); // Middleware for session handling
 const path = require('path'); // Module to handle file and directory paths
 
+
+
 // ==========================
 // Import Route Handlers
 // ==========================
@@ -19,6 +21,7 @@ const usersRoutes = require('./routes/users'); // Handles user authentication an
 const adminUsersRoutes = require('./routes/adminUsers'); // Admin user management routes
 const adminProductsRoutes = require('./routes/adminProducts'); // Admin product management routes
 const uploadRoutes = require('./routes/upload');
+
 
 // ==========================
 // Initialize Express App
@@ -82,12 +85,23 @@ app.use('/api/admin-users', adminUsersRoutes); // API routes for admin user mana
 
 app.use('/api/upload', uploadRoutes); // API routes for uploading products on the admin site
 
+const cartRoutes = require('./routes/cart'); // Import the cart routes
+app.use('/api/cart', cartRoutes); // Use the cart routes
+
+const healthTipsRoutes = require("./routes/healthtips");
+app.use("/api/health-tips", healthTipsRoutes);
+
+
+
 // ==========================
 // Catch-All Route for Undefined Paths
 // ==========================
 app.use((req, res) => {
     res.status(404).send('Page Not Found'); // Handles undefined routes
 });
+
+
+
 
 // ==========================
 // Start the Server

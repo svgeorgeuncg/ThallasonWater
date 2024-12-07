@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const productId = urlParams.get("id");
 
     if (!productId) {
-        alert("Product ID not provided!");
+        alert("Product ID not found!");
         return;
     }
 
@@ -15,19 +15,49 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const product = await response.json();
 
-        document.getElementById("product-name").textContent = product.name;
+        // Populate product details on the page
         document.getElementById("product-image").src = product.image_path;
-        document.getElementById("product-image").alt = product.name;
+        document.getElementById("product-name").textContent = product.name;
         document.getElementById("product-description").textContent = product.description;
         document.getElementById("product-price").textContent = `$${product.price.toFixed(2)}`;
 
-        // Add to Cart Button Functionality
+        // Define the addToCart function here
+        function addToCart(product) {
+            // Retrieve the cart from localStorage or initialize an empty array
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        
+            // Check if the product already exists in the cart
+            const existingProduct = cart.find(item => item.id === product.id);
+            if (existingProduct) {
+                // Increment the quantity of the existing product
+                existingProduct.quantity = 1;
+            } else {
+                // Add the new product to the cart with a quantity of 1
+                product.quantity = 1;
+                cart.push(product);
+            }
+        
+            // Save the updated cart back to localStorage
+            localStorage.setItem("cart", JSON.stringify(cart));
+        
+            // Display a single success alert
+            if (!existingProduct) {
+                alert(`${product.name} added to your cart!`);
+            }
+        }
+        
+
+        // Attach add to cart functionality
         document.getElementById("add-to-cart-btn").addEventListener("click", () => {
-            alert(`Added "${product.name}" to the cart!`);
-            // Logic to update cart goes here
+            addToCart({
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                image: product.image_path,
+            });
         });
     } catch (error) {
         console.error("Error loading product details:", error);
-        document.getElementById("product-detail").innerHTML = `<p>Failed to load product details. Please try again later.</p>`;
+        alert("Failed to load product details. Please try again.");
     }
 });
