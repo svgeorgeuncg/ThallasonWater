@@ -1,0 +1,73 @@
+/* General body styling */
+body {
+    font-family: 'Poppins', sans-serif; /* Modern and clean font */
+    background: linear-gradient(135deg, #13073d, #00ffcc); /* Bright, fun gradient */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styling */
+header {
+    background-color: #04030f;
+    padding: 1rem 0;
+}
+
+
+/* Health Tip Container */
+.health-tip-container {
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 650px;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header inside health tip container */
+.health-tip-container h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Health tip text */
+#health-tip p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+    line-height: 1.6;
+    padding: 1rem;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+#health-tip p:hover {
+    background-color: #e0e0e0; /* Slight hover effect for the health tip */
+}
+
+/* Button styling */
+.btn {
+    background-color: #3e92cc;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #007BFF;
+    transform: scale(1.1); /* Slight animation to make the button pop */
+}
+
+

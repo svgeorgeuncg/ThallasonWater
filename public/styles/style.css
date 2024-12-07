@@ -119,6 +119,17 @@ nav {
 
 
 /* Footer Section */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    flex: 1;
+}
+
 footer {
     width: 100%;
     background-color: #04030f;
@@ -126,16 +137,9 @@ footer {
     padding: 1rem;
     font-size: 0.9rem;
     color: #eef0f2;
+    margin-top: auto; /* Ensures the footer is pushed to the bottom */
 }
 
-footer a {
-    color: #3e92cc;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
 
 
 /* Shop Section */
@@ -299,43 +303,3 @@ footer a:hover {
     background-color: #2179b8;
 }
 
-
-.health-tip-container {
-    text-align: center;
-    margin: 2rem auto;
-    max-width: 600px;
-    font-family: Arial, sans-serif;
-}
-
-.health-tip-container h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-#health-tip p {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
-#health-tip a {
-    font-size: 1rem;
-    color: #007BFF;
-    text-decoration: none;
-}
-
-#health-tip a:hover {
-    text-decoration: underline;
-}
-
-.btn {
-    background-color: #007BFF;
-    color: white;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-}

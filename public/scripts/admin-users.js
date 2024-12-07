@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         try {
             const response = await fetch('/api/admin/users/all');
             const users = await response.json();
-
+    
             tableBody.innerHTML = ''; // Clear the table
-
+    
             users.forEach((user) => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         ${
                             user.role === 'user'
                                 ? `<button class="promote-btn" data-id="${user.id}">Promote</button>`
-                                : `<button class="demote-btn" data-id="${user.id}">Demote</button>`
+                                : ''
                         }
                         <button class="delete-btn" data-id="${user.id}">Delete</button>
                     </td>
@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             console.error('Failed to load users:', error);
         }
     }
+    
 
     // Handle Promote
     tableBody.addEventListener('click', async (e) => {

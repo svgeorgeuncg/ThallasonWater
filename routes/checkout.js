@@ -3,9 +3,8 @@ const express = require('express');
 const router = express.Router();
 const { addOrder, addOrderDetails } = require('../models/checkoutModel');
 
-// Route for processing a checkout
 router.post('/', async (req, res) => {
-    const { name, email, address, state, zip, payment, cart } = req.body;
+    const { name, email, address, city, state, zip, payment, cart } = req.body;
 
     if (!cart || cart.length === 0) {
         return res.status(400).json({ error: 'Cart is empty. Cannot process checkout.' });
@@ -17,6 +16,7 @@ router.post('/', async (req, res) => {
             name,
             email,
             address,
+            city, // Include city
             state,
             zip,
             payment,
@@ -26,8 +26,10 @@ router.post('/', async (req, res) => {
 
         // Step 2: Add order details for each item in the cart
         for (const item of cart) {
+            console.log(`Order ID: ${orderId}, Product ID: ${item.id}, Quantity: ${item.quantity}`);
             await addOrderDetails(orderId, item.id, item.quantity);
         }
+        
 
         console.log(`Order details saved for Order ID: ${orderId}`);
 
@@ -41,5 +43,6 @@ router.post('/', async (req, res) => {
         res.status(500).json({ error: 'Failed to process checkout. Please try again.' });
     }
 });
+
 
 module.exports = router;
